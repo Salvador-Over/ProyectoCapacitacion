@@ -15,9 +15,18 @@ namespace CapaVista
     {
         Controlador cn = new Controlador();
         string emp = "empleados";
+        private void LlenarComboBox(ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+            comboBox.Items.Add("Seleccionar");
+            comboBox.Items.Add("Activo");
+            comboBox.Items.Add("Inactivo");
+            comboBox.SelectedIndex = 0;
+        }
         public Consulta()
         {
             InitializeComponent();
+            LlenarComboBox(cboEstadoEmp);
         }
         //Mostrar los datos CAPA VISTA
         public void actualizardatagriew()
