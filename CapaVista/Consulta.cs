@@ -40,9 +40,49 @@ namespace CapaVista
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             actualizardatagriew();
+        }
+
+        private void eliminarEmp_Click(object sender, EventArgs e)
+        {
+            /*  if (Dgv.SelectedRows.Count > 0)
+  {
+      // Obtener el ID del registro seleccionado
+      int id = Convert.ToInt32(Dgv.SelectedRows[0].Cells["id"].Value);
+
+      // Confirmar la eliminación
+      DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este registro?", "Confirmar eliminación", MessageBoxButtons.YesNo);
+
+      if (result == DialogResult.Yes)
+      {
+          //bool eliminado = Controlador.EliminarRegistro(id);
+
+         if (eliminado)
+          {
+              MessageBox.Show("Registro marcado como inactivo.");
+              CargarDatosEnVista(); // Volver a cargar los datos después de la eliminación
+          }
+          else
+          {
+              MessageBox.Show("No se pudo eliminar el registro.");
+          }
+      }
+  }
+  else
+  {
+      MessageBox.Show("Por favor selecciona un registro.");
+  }*/
+        }
+        private void CargarDatosEnVista()
+        {
+            // Llama al método del controlador para obtener los datos
+            //DataTable data = Controlador.CargarDatos();
+
+            // Asigna los datos al DataGridView
+            //Dgv.DataSource = data;
         }
     }
 }

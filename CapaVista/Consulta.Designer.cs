@@ -190,6 +190,7 @@ namespace CapaVista
             this.eliminarEmp.TabIndex = 15;
             this.eliminarEmp.Text = "Eliminar";
             this.eliminarEmp.UseVisualStyleBackColor = true;
+            this.eliminarEmp.Click += new System.EventHandler(this.eliminarEmp_Click);
             // 
             // Consulta
             // 
