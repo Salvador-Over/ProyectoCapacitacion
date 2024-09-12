@@ -96,5 +96,47 @@ namespace CapaControlador
             return dataTable; // Retorna los datos activos
         }
 
+
+
+        public bool BuscarRegistro(int id)
+        {
+            //OdbcConnection conn = Conexion.conexion(); // Abrir conexión
+            bool resultado = false;
+
+            try
+            {
+                string query = "UPDATE tu_tabla SET estado = 'inactivo' WHERE id = ?";
+                //using (OdbcCommand command = new OdbcCommand(query, conn))
+                {
+                    //command.Parameters.AddWithValue("@id", id);
+                    //int rowsAffected = command.ExecuteNonQuery();
+
+                    //if (rowsAffected > 0)
+                    {
+                        resultado = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                //Conexion.desconexion(conn); // Cerrar conexión
+            }
+
+            return resultado; // Retorna true si se actualizó correctamente, false si hubo algún error
+        }
+
+
+
+
+
+
+
     }
+
+
+
 }
